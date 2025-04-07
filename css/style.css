@@ -79,12 +79,23 @@ main {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
+    transform: 0.3s;
 }
 
 .photo-card {
     width: calc(100% / 3 - calc(40px / 3));
     background-color: aliceblue;
     padding: 15px;
+    transition: 0.8s;
+}
+
+.photo-card:hover {
+    transform: scale(1.1) rotate(-15deg);
+    z-index: 1;
+}
+
+.photo-card:hover .red-dot {
+    display: none;
 }
 
 .photo-img {
