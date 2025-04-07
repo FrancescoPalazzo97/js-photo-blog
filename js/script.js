@@ -27,8 +27,38 @@ const displayCards = array => { // Funzione a cui passo l'array
     return photoCards; // Ritorno la stringa completa
 }
 
+const focusCard = (arr) => {
+
+    arr.forEach(item => {
+
+        item.addEventListener(`click`, () => {
+            let img = item.querySelector(`.photo-img>img`);
+            let overlayImg = overlay.querySelector(`img`);
+            overlay.classList.remove(`d-none`);
+            overlayImg.src = img.src;
+            console.log(overlay);
+        })
+
+    });
+}
+
+const closeFocus = () => {
+
+    closeBtn.addEventListener(`click`, () => {
+        overlay.classList.add(`d-none`);
+    })
+
+}
+
 let photoSection = document.getElementById(`photo-section`); // Prendo l'elemento dalla pagina HTML
+let overlay = document.getElementById(`overlay`);
+let closeBtn = document.getElementById(`close`);
 
 axios.get(api).then(resp => { // Effettuo la chiamata AJAX
     photoSection.innerHTML = displayCards(resp.data); // Passo l'array ricevuto dalla chiamata alla funzione displayCards e inserisco il tutto nella photo-section
+    let cards = document.querySelectorAll(`.photo-card`);
+
+    focusCard(cards);
+
+    closeFocus();
 })
