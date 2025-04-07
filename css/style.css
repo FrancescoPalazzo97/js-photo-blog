@@ -15,18 +15,15 @@
 /* LAYOUT */
 
 header {
-    width: 100vw;
     height: 10vh;
 }
 
 main {
-    width: 100vw;
     height: 90vh;
 }
 
 .container {
     max-width: 900px;
-    height: 95%;
 }
 
 /* FLEX */
@@ -74,7 +71,6 @@ main {
 }
 
 #photo-section {
-    height: 100%;
     gap: 20px;
 }
 
@@ -87,7 +83,6 @@ main {
 
 .photo-card {
     width: calc(100% / 3 - calc(40px / 3));
-    height: calc(100% / 2- calc(20px / 3));
     background-color: aliceblue;
     padding: 15px;
 }
@@ -98,4 +93,59 @@ main {
 
 .photo-text {
     margin-top: 10px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 2000px) {
+
+    header h1 {
+        font-size: 75px;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    main {
+        height: 100%;
+        padding-bottom: 60px;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+
+    .photo-card {
+        width: calc(100% / 2 - calc(40px / 2));
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    main {
+        padding: 60px 160px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .photo-card {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    main {
+        padding: 60px 100px;
+    }
+
 }
