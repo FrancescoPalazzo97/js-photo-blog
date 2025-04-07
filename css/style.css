@@ -1,0 +1,23 @@
+/* GENERICS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+header {
+    height: 10vh;
+    background-image: url(../img/wall.png);
+    font-family: 'Edu Tas Beginner', sans-serif;
+}
+
+/* HEADER */
+
+header h1 {
+    text-align: center;
+    line-height: 10vh;
+    font-size: 55px;
+}
