@@ -173,6 +173,11 @@ main {
 
 .photo-container {
     height: 100%;
+    width: 100%;
+}
+
+.photo-container img {
+    width: 40%;
 }
 
 /* RESPONSIVE */
@@ -204,6 +209,10 @@ main {
         width: calc(100% / 2 - calc(40px / 2));
     }
 
+    .photo-container img {
+        width: 80%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -220,12 +229,20 @@ main {
         width: 100%;
     }
 
+    .photo-container img {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
 
     main {
         padding: 60px 100px;
+    }
+
+    #close {
+        right: 40px;
     }
 
 }
