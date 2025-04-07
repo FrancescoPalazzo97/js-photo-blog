@@ -39,6 +39,16 @@ main {
     flex-wrap: wrap;
 }
 
+/* POSITION */
+
+.p-relative {
+    position: relative;
+}
+
+.p-absolute {
+    position: absolute;
+}
+
 /* HEADER */
 
 header {
@@ -66,6 +76,13 @@ main {
 #photo-section {
     height: 100%;
     gap: 20px;
+}
+
+.red-dot {
+    width: 35px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .photo-card {
