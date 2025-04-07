@@ -32,10 +32,6 @@ main {
     display: none;
 }
 
-.d-block {
-    display: block;
-}
-
 /* FLEX */
 
 .d-flex {
@@ -101,7 +97,7 @@ main {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    transform: 0.3s;
+    transition: 0.3s;
 }
 
 .photo-card {
@@ -113,7 +109,7 @@ main {
 }
 
 .photo-card:hover {
-    transform: scale(1.1) rotate(-15deg);
+    transform: scale(1.1) rotate(-10deg);
     z-index: 1;
 }
 
@@ -142,13 +138,11 @@ main {
 
 #overlay {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 2;
-    overflow: hidden;
 }
 
 #close {
